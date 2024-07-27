@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS and other CSS files -->
+  <!-- Favicon -->
+  <link rel="icon" href="/img/logo_new.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/carousel.css">
+  <link rel="stylesheet" href="/css/projects.css">
+  <link rel="stylesheet" href="/css/about.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/js/script.js"></script>
+
+  <title>Greenfield Agro Services</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header id="header">
+    <div class="navbar">
+      <div class="logo">
+        <img src="/img/logo_new.png" alt="Company Logo" height="100vh">
+      </div>
+      <div class="hamburger-menu" onclick="toggleNavbar()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="navbar-items" id="navbarItems">
+        <a href="/index.html">
+          <li class="nav-item"> Home </li>
+        </a>
+        <a href="/pages/projects.html">
+          <li class="nav-item"> Projects </li>
+        </a>
+        <li class="dropdown">
+          <a href="/pages/services.html">
+            <span class="nav-item"> Services </span>
+          </a>
+          <div class="dropdown-content">
+            <a href="/pages/services.html">Contract Farming</a>
+            <a href="/pages/services.html">Import & Export</a>
+            <a href="/pages/services.html">Certifications</a>
+        </div>
+        </li>
+        <!-- <li class="nav-item">Testimonials</li> -->
+        <a href="/pages/about.html">
+          <li class="nav-item"> About us </li>
+        </a>
+        <a href="/pages/contact.html">
+          <li class="nav-item"> Contact us </li>
+        </a>
+        <!-- <span>
+                <li class="button nav-button">Get Started</li>
+                </span> -->
+        <a href="https://wa.me/9373177177?text=Hello%20Greenfield!!%20Are%20You%20Up%20For%20Small%20Chat%20??"
+          target="_blank">
+          <button class="button cssbuttons-io-button">
+            Connect
+            <div class="icon">
+              <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+          </button>
+        </a>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- Carousel -->
+  <div id="carousel-container" data-aos="zoom-in">
+    <object data="/pages/carousel-abt.html" type="text/html" style="width:100%; height: 100vh; margin-right: -20px; padding: 0;"></object>
+  </div>
+
+  <svg id="wave" class="svg" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 240" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(105, 197, 143, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(183, 227, 168, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+      d="M0,48L60,44C120,40,240,32,360,48C480,64,600,104,720,136C840,168,960,192,1080,204C1200,216,1320,216,1440,180C1560,144,1680,72,1800,64C1920,56,2040,112,2160,148C2280,184,2400,200,2520,204C2640,208,2760,200,2880,180C3000,160,3120,128,3240,116C3360,104,3480,112,3600,120C3720,128,3840,136,3960,136C4080,136,4200,128,4320,124C4440,120,4560,120,4680,136C4800,152,4920,184,5040,176C5160,168,5280,120,5400,104C5520,88,5640,104,5760,116C5880,128,6000,136,6120,144C6240,152,6360,160,6480,136C6600,112,6720,56,6840,36C6960,16,7080,32,7200,32C7320,32,7440,16,7560,16C7680,16,7800,32,7920,32C8040,32,8160,16,8280,44C8400,72,8520,144,8580,180L8640,216L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(94, 205, 135, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(157, 229, 138, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+      d="M0,0L60,28C120,56,240,112,360,124C480,136,600,104,720,76C840,48,960,24,1080,16C1200,8,1320,16,1440,40C1560,64,1680,104,1800,128C1920,152,2040,160,2160,156C2280,152,2400,136,2520,112C2640,88,2760,56,2880,60C3000,64,3120,104,3240,124C3360,144,3480,144,3600,156C3720,168,3840,192,3960,204C4080,216,4200,216,4320,184C4440,152,4560,88,4680,56C4800,24,4920,24,5040,56C5160,88,5280,152,5400,156C5520,160,5640,104,5760,68C5880,32,6000,16,6120,28C6240,40,6360,80,6480,84C6600,88,6720,56,6840,56C6960,56,7080,88,7200,84C7320,80,7440,40,7560,56C7680,72,7800,144,7920,164C8040,184,8160,152,8280,132C8400,112,8520,104,8580,100L8640,96L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(45, 107, 61, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(67, 160, 71, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)"
+      d="M0,96L60,112C120,128,240,160,360,180C480,200,600,208,720,184C840,160,960,104,1080,92C1200,80,1320,112,1440,124C1560,136,1680,128,1800,124C1920,120,2040,120,2160,108C2280,96,2400,72,2520,64C2640,56,2760,64,2880,72C3000,80,3120,88,3240,96C3360,104,3480,112,3600,120C3720,128,3840,136,3960,124C4080,112,4200,80,4320,68C4440,56,4560,64,4680,80C4800,96,4920,120,5040,116C5160,112,5280,80,5400,56C5520,32,5640,16,5760,8C5880,0,6000,0,6120,28C6240,56,6360,112,6480,116C6600,120,6720,72,6840,68C6960,64,7080,104,7200,104C7320,104,7440,64,7560,56C7680,48,7800,72,7920,96C8040,120,8160,144,8280,156C8400,168,8520,168,8580,168L8640,168L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+  </svg>
+
+  <div class="about-heading"
+    style="text-align: center; text-decoration: underline; margin-top: 20px; margin-bottom: 20px;">
+    <h1>
+      About Us
+    </h1>
+  </div>
+
+
+  <div class="container-abt">
+    <div class="card-abt">
+      <div class="face face1">
+        <div class="content">
+          <div class="icon">
+            <i class="fa fa-seedling" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <h2 style="text-align: center; margin-bottom: 10px;">
+            Mission
+          </h2>
+          <p>Bridging the farm to fork gap, ensuring farmers prosper and communities savor fresh, ethical foodp</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-abt">
+      <div class="face face1">
+        <div class="content">
+          <div class="icon">
+            <i class="fa fa-wheat-awn" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <h2 style="text-align: center; margin-bottom: 10px;">
+            Goal
+          </h2>
+          <p>Empowering farmers, connecting conscious consumers, and building a delicious, responsible future for food.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-abt">
+      <div class="face face1">
+        <div class="content">
+          <div class="icon">
+            <i class="fa fa-cubes" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="face face2">
+        <div class="content">
+          <h2 style="text-align: center; margin-bottom: 10px;">
+            Vision
+          </h2>
+          <p>A thriving food ecosystem where sustainability and fair value weave together, nourishing people and planet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg id="wave" class="svg" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 240" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(105, 197, 143, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(183, 227, 168, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+      d="M0,24L60,36C120,48,240,72,360,76C480,80,600,64,720,52C840,40,960,32,1080,56C1200,80,1320,136,1440,148C1560,160,1680,128,1800,132C1920,136,2040,176,2160,164C2280,152,2400,88,2520,88C2640,88,2760,152,2880,156C3000,160,3120,104,3240,76C3360,48,3480,48,3600,72C3720,96,3840,144,3960,168C4080,192,4200,192,4320,196C4440,200,4560,208,4680,212C4800,216,4920,216,5040,204C5160,192,5280,168,5400,136C5520,104,5640,64,5760,60C5880,56,6000,88,6120,100C6240,112,6360,104,6480,96C6600,88,6720,80,6840,80C6960,80,7080,88,7200,100C7320,112,7440,128,7560,132C7680,136,7800,128,7920,124C8040,120,8160,120,8280,124C8400,128,8520,136,8580,140L8640,144L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(94, 205, 135, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(157, 229, 138, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+      d="M0,216L60,208C120,200,240,184,360,164C480,144,600,120,720,108C840,96,960,96,1080,104C1200,112,1320,128,1440,120C1560,112,1680,80,1800,68C1920,56,2040,64,2160,80C2280,96,2400,120,2520,132C2640,144,2760,144,2880,156C3000,168,3120,192,3240,172C3360,152,3480,88,3600,56C3720,24,3840,24,3960,28C4080,32,4200,40,4320,52C4440,64,4560,80,4680,88C4800,96,4920,96,5040,104C5160,112,5280,128,5400,116C5520,104,5640,64,5760,40C5880,16,6000,8,6120,32C6240,56,6360,112,6480,136C6600,160,6720,152,6840,152C6960,152,7080,160,7200,160C7320,160,7440,152,7560,128C7680,104,7800,64,7920,40C8040,16,8160,8,8280,28C8400,48,8520,96,8580,120L8640,144L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(45, 107, 61, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(67, 160, 71, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)"
+      d="M0,120L60,100C120,80,240,40,360,20C480,0,600,0,720,28C840,56,960,112,1080,112C1200,112,1320,56,1440,40C1560,24,1680,48,1800,76C1920,104,2040,136,2160,124C2280,112,2400,56,2520,28C2640,0,2760,0,2880,24C3000,48,3120,96,3240,116C3360,136,3480,128,3600,120C3720,112,3840,104,3960,108C4080,112,4200,128,4320,136C4440,144,4560,144,4680,144C4800,144,4920,144,5040,156C5160,168,5280,192,5400,180C5520,168,5640,120,5760,120C5880,120,6000,168,6120,180C6240,192,6360,168,6480,160C6600,152,6720,160,6840,168C6960,176,7080,184,7200,164C7320,144,7440,96,7560,72C7680,48,7800,48,7920,72C8040,96,8160,144,8280,168C8400,192,8520,192,8580,192L8640,192L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+  </svg>
+
+  <svg id="wave" class="svg" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 240" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(105, 197, 143, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(183, 227, 168, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+      d="M0,24L60,36C120,48,240,72,360,76C480,80,600,64,720,52C840,40,960,32,1080,56C1200,80,1320,136,1440,148C1560,160,1680,128,1800,132C1920,136,2040,176,2160,164C2280,152,2400,88,2520,88C2640,88,2760,152,2880,156C3000,160,3120,104,3240,76C3360,48,3480,48,3600,72C3720,96,3840,144,3960,168C4080,192,4200,192,4320,196C4440,200,4560,208,4680,212C4800,216,4920,216,5040,204C5160,192,5280,168,5400,136C5520,104,5640,64,5760,60C5880,56,6000,88,6120,100C6240,112,6360,104,6480,96C6600,88,6720,80,6840,80C6960,80,7080,88,7200,100C7320,112,7440,128,7560,132C7680,136,7800,128,7920,124C8040,120,8160,120,8280,124C8400,128,8520,136,8580,140L8640,144L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(94, 205, 135, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(157, 229, 138, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+      d="M0,216L60,208C120,200,240,184,360,164C480,144,600,120,720,108C840,96,960,96,1080,104C1200,112,1320,128,1440,120C1560,112,1680,80,1800,68C1920,56,2040,64,2160,80C2280,96,2400,120,2520,132C2640,144,2760,144,2880,156C3000,168,3120,192,3240,172C3360,152,3480,88,3600,56C3720,24,3840,24,3960,28C4080,32,4200,40,4320,52C4440,64,4560,80,4680,88C4800,96,4920,96,5040,104C5160,112,5280,128,5400,116C5520,104,5640,64,5760,40C5880,16,6000,8,6120,32C6240,56,6360,112,6480,136C6600,160,6720,152,6840,152C6960,152,7080,160,7200,160C7320,160,7440,152,7560,128C7680,104,7800,64,7920,40C8040,16,8160,8,8280,28C8400,48,8520,96,8580,120L8640,144L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(45, 107, 61, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(67, 160, 71, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)"
+      d="M0,120L60,100C120,80,240,40,360,20C480,0,600,0,720,28C840,56,960,112,1080,112C1200,112,1320,56,1440,40C1560,24,1680,48,1800,76C1920,104,2040,136,2160,124C2280,112,2400,56,2520,28C2640,0,2760,0,2880,24C3000,48,3120,96,3240,116C3360,136,3480,128,3600,120C3720,112,3840,104,3960,108C4080,112,4200,128,4320,136C4440,144,4560,144,4680,144C4800,144,4920,144,5040,156C5160,168,5280,192,5400,180C5520,168,5640,120,5760,120C5880,120,6000,168,6120,180C6240,192,6360,168,6480,160C6600,152,6720,160,6840,168C6960,176,7080,184,7200,164C7320,144,7440,96,7560,72C7680,48,7800,48,7920,72C8040,96,8160,144,8280,168C8400,192,8520,192,8580,192L8640,192L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+  </svg>
+
+  <!-- Marquee Strip -->
+  <div class="marquee-container" onmouseover="pauseMarquee()" onmouseout="resumeMarquee()">
+    <marquee behavior="scroll" direction="left" scrollamount="35" class="marquee-abt" loop="infinite">
+      <img src="/img/AB1.jpg" alt="Image 1" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+      <img src="/img/AB2.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+      <img src="/img/DM1.jpg" alt="Image 2" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+      <img src="/img/CF1.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+      <img src="/img/df.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+      <img src="/img/draksha1.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+      <img src="/img/fb-1.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+      <img src="/img/fb-2.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+      <img src="/img/fb-3.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+        <img src="/img/Insta-7.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+        <img src="/img/fb-4.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+        <img src="/img/fb5.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+        <img src="/img/fb-6.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+        <img src="/img/fb-7.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+        <img src="/img/fb-8.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+        <img src="/img/fb-9.jpg" alt="Image 3" class="img-marquee" onmouseover="popImage(this)"
+        onmouseout="resetImage(this)">
+    </marquee>
+  </div>
+
+  <svg id="wave" class="svg" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 240" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(105, 197, 143, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(183, 227, 168, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+      d="M0,48L60,48C120,48,240,48,360,44C480,40,600,32,720,40C840,48,960,72,1080,92C1200,112,1320,128,1440,124C1560,120,1680,96,1800,80C1920,64,2040,56,2160,64C2280,72,2400,96,2520,112C2640,128,2760,136,2880,144C3000,152,3120,160,3240,152C3360,144,3480,120,3600,108C3720,96,3840,96,3960,100C4080,104,4200,112,4320,96C4440,80,4560,40,4680,20C4800,0,4920,0,5040,4C5160,8,5280,16,5400,44C5520,72,5640,120,5760,136C5880,152,6000,136,6120,144C6240,152,6360,184,6480,200C6600,216,6720,216,6840,216C6960,216,7080,216,7200,208C7320,200,7440,184,7560,164C7680,144,7800,120,7920,108C8040,96,8160,96,8280,116C8400,136,8520,176,8580,196L8640,216L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(94, 205, 135, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(157, 229, 138, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+      d="M0,96L60,96C120,96,240,96,360,92C480,88,600,80,720,84C840,88,960,104,1080,92C1200,80,1320,40,1440,36C1560,32,1680,64,1800,100C1920,136,2040,176,2160,184C2280,192,2400,168,2520,132C2640,96,2760,48,2880,36C3000,24,3120,48,3240,52C3360,56,3480,40,3600,44C3720,48,3840,72,3960,68C4080,64,4200,32,4320,40C4440,48,4560,96,4680,128C4800,160,4920,176,5040,164C5160,152,5280,112,5400,116C5520,120,5640,168,5760,180C5880,192,6000,168,6120,152C6240,136,6360,128,6480,112C6600,96,6720,72,6840,88C6960,104,7080,160,7200,180C7320,200,7440,184,7560,152C7680,120,7800,72,7920,80C8040,88,8160,152,8280,156C8400,160,8520,104,8580,76L8640,48L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(45, 107, 61, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(67, 160, 71, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)"
+      d="M0,0L60,20C120,40,240,80,360,96C480,112,600,104,720,92C840,80,960,64,1080,76C1200,88,1320,128,1440,128C1560,128,1680,88,1800,96C1920,104,2040,160,2160,176C2280,192,2400,168,2520,152C2640,136,2760,128,2880,116C3000,104,3120,88,3240,100C3360,112,3480,152,3600,164C3720,176,3840,160,3960,160C4080,160,4200,176,4320,176C4440,176,4560,160,4680,156C4800,152,4920,160,5040,156C5160,152,5280,136,5400,116C5520,96,5640,72,5760,52C5880,32,6000,16,6120,8C6240,0,6360,0,6480,20C6600,40,6720,80,6840,96C6960,112,7080,104,7200,96C7320,88,7440,80,7560,64C7680,48,7800,24,7920,44C8040,64,8160,128,8280,132C8400,136,8520,80,8580,52L8640,24L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+  </svg>
+
+  <svg id="wave" class="svg" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 240" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(105, 197, 143, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(183, 227, 168, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+      d="M0,48L60,48C120,48,240,48,360,44C480,40,600,32,720,40C840,48,960,72,1080,92C1200,112,1320,128,1440,124C1560,120,1680,96,1800,80C1920,64,2040,56,2160,64C2280,72,2400,96,2520,112C2640,128,2760,136,2880,144C3000,152,3120,160,3240,152C3360,144,3480,120,3600,108C3720,96,3840,96,3960,100C4080,104,4200,112,4320,96C4440,80,4560,40,4680,20C4800,0,4920,0,5040,4C5160,8,5280,16,5400,44C5520,72,5640,120,5760,136C5880,152,6000,136,6120,144C6240,152,6360,184,6480,200C6600,216,6720,216,6840,216C6960,216,7080,216,7200,208C7320,200,7440,184,7560,164C7680,144,7800,120,7920,108C8040,96,8160,96,8280,116C8400,136,8520,176,8580,196L8640,216L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(94, 205, 135, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(157, 229, 138, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+      d="M0,96L60,96C120,96,240,96,360,92C480,88,600,80,720,84C840,88,960,104,1080,92C1200,80,1320,40,1440,36C1560,32,1680,64,1800,100C1920,136,2040,176,2160,184C2280,192,2400,168,2520,132C2640,96,2760,48,2880,36C3000,24,3120,48,3240,52C3360,56,3480,40,3600,44C3720,48,3840,72,3960,68C4080,64,4200,32,4320,40C4440,48,4560,96,4680,128C4800,160,4920,176,5040,164C5160,152,5280,112,5400,116C5520,120,5640,168,5760,180C5880,192,6000,168,6120,152C6240,136,6360,128,6480,112C6600,96,6720,72,6840,88C6960,104,7080,160,7200,180C7320,200,7440,184,7560,152C7680,120,7800,72,7920,80C8040,88,8160,152,8280,156C8400,160,8520,104,8580,76L8640,48L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(45, 107, 61, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(67, 160, 71, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)"
+      d="M0,0L60,20C120,40,240,80,360,96C480,112,600,104,720,92C840,80,960,64,1080,76C1200,88,1320,128,1440,128C1560,128,1680,88,1800,96C1920,104,2040,160,2160,176C2280,192,2400,168,2520,152C2640,136,2760,128,2880,116C3000,104,3120,88,3240,100C3360,112,3480,152,3600,164C3720,176,3840,160,3960,160C4080,160,4200,176,4320,176C4440,176,4560,160,4680,156C4800,152,4920,160,5040,156C5160,152,5280,136,5400,116C5520,96,5640,72,5760,52C5880,32,6000,16,6120,8C6240,0,6360,0,6480,20C6600,40,6720,80,6840,96C6960,112,7080,104,7200,96C7320,88,7440,80,7560,64C7680,48,7800,24,7920,44C8040,64,8160,128,8280,132C8400,136,8520,80,8580,52L8640,24L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z">
+    </path>
+  </svg>
+  <!-- Profile card -->
+
+  <div id="profileCard">
+    <div class="card-face">
+      <img src="/img/Mama.png" alt="Profile Image" class="profile-image">
+      <div class="profile-info">
+        <h2>Mr. Amol A. Gorhe</h2>
+        <p>CEO & Founder <br> <a href="https://www.greenfield.asia/" target="_blank">@Greenfield Agro services</a> </p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/amol.gorhe" target="_blank" class="social-icon"><i
+            class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/amolgorhe/" target="_blank" class="social-icon"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://www.greenfield.asia/" target="_blank" class="social-icon"><i class="fab fa-chrome"></i></a>
+      </div>
+    </div>
+    <div class="card-face back">
+      <video controls>
+        <source src="/vid/GFA1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button class="flip-button flip-button-back" onclick="unflipCard()">Flip Back</button>
+    </div>
+    <button class="flip-button flip-button-front" onclick="flipCard()">Flip</button>
+  </div>
+  <!-- FOOTER -->
+
+  <div class="footer-wave">
+    <div class="custom-shape-divider-bottom-1705669438">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25" class="shape-fill"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5" class="shape-fill"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+  </div>
+  <footer class="footer">
+
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/index.html">
+            <img src="/img/logo_new.png" alt="Company Logo" class="company-logo-footer">
+          </a>
+          <p>Not just produce, but promises kept. Greenfield Agro: Where quality meets conscience, and every dish tells a story.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="quick-links-footer">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/projects.html">Projects</a></li>
+            <li><a href="/pages/services.html">Services</a></li>
+            <li><a href="/pages/about.html">About Us</a></li>
+            <li><a href="/pages/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Gallery</h4>
+          <div class="gallery-footer">
+            <div class="gallery-row">
+              <img src="/img/AB.jpg" alt="Gallery Image 1">
+              <img src="/img/basket-car.jpg" alt="Gallery Image 2">
+              <img src="/img/certifications.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-row">
+              <img src="/img/df.jpg" alt="Gallery Image 4">
+              <img src="/img/ff2.jpg" alt="Gallery Image 5">
+              <img src="/img/hh.jpg" alt="Gallery Image 6">
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-col">
+            <div class="social-links-footer">
+              <a href="https://www.facebook.com/mygreenfield.in/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/mygreenfield.in/?hl=en" target="_blank"><i
+                  class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@greenfieldagroservices.6906" target="_blank"><i
+                  class="fab fa-youtube"></i></a>
+              <a href="https://wa.me/9373177177?text=Hello%20Greenfield!!%20Are%20You%20Up%20For%20Small%20Chat%20??"
+                target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <p>Greenfield Agro Services
+            Plot no. 32, Hanuman Nagar,
+            Near Amrutdham, Panchavati,
+            Nashik, Maharashtra, 422003</p>
+          <p>Email: amol@greenfield.asia</p>
+          <p>Phone: +91 9373 177 177</p>
+          <p>GSTIN : 27AJMPG9975B2ZT</p>
+        </div>
+      </div>
+      <div class="footer-strip">
+        <p>
+          Copyright © 2024 <a href="https://greenfield.asia/">Greenfield Agro Services.</a> All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="/js/about.js"></script>
+  <script src="/js/carousel.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

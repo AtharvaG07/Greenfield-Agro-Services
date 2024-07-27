@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 0.3s, width 0.3s, border-radius 0.3s;
+      backdrop-filter: none;
+    }
+
+    .navbar-nav .nav-link {
+      color: #000000 !important;
+    }
+
+    .nav-item {
+      margin-right: 30px;
+    }
+
+    .nav-item:last-child {
+      margin-right: 0;
+    }
+
+    .btn-connect {
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 30px;
+      padding: 10px 20px;
+      transition: all 0.3s;
+    }
+
+    .btn-connect:hover {
+      background-color: #45a049;
+      color: #fff;
+    }
+
+    /* Updated styling for the .scrolled class */
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(11px);
+      -webkit-backdrop-filter: blur(11px);
+      border-radius: 50px;
+      margin-left: -500px;
+    }
+
+    .navbar {
+      background-color: transparent !important;
+      height: 90px;
+      transition: justify-content 0.3s;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .dropdown {
+      border-radius: 30px;
+      color: #000000;
+
+    }
+
+    .dropdown-menu {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 2px solid rgb(247, 82, 82);
+    }
+
+
+    .dropdown-item {
+      color: #000000 !important;
+    }
+
+    .dropdown-item:hover {
+      background-color: #dadada !important;
+    }
+
+    @media (max-width: 767px){
+      .navbar{
+        background-color: #dadada;
+        width: 100%;
+      }
+      .navbar-collapse {
+        background-color: #dadada; 
+      }
+
+      .navbar.scrolled{
+        align-items: center;
+      }
+    }
+  </style>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-transparent navbar-expand-lg-start">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/img/logo_new.png" alt="Company Logo" height="80">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/projects.html">Projects</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle-split" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/pages/services.html">Contract Farming</a>
+                <a class="dropdown-item" href="/pages/services.html">Import & Export</a>
+                <a class="dropdown-item" href="/pages/services.html">Certifications</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contact.html">Contact us</a>
+            </li>
+          </ul>
+
+
+          <a href="https://wa.me/9373177177?text=Hello%20Greenfield!!%20Are%20You%20Up%20For%20Small%20Chat%20??"
+            target="_blank" class="btn ml-lg-3">
+            <button class="button cssbuttons-io-button">
+              Connect
+              <div class="icon">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor">
+                  </path>
+                </svg>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <script src="/js/script.js"></script>
+  <script>
+
+  </script>
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

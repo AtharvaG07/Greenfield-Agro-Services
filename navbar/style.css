@@ -1,0 +1,252 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+  background-color: #77aa77;
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E"); */
+  /* background-attachment: fixed; */
+  /* background-size: cover; */
+}
+
+/* Style the custom scrollbar */
+body::-webkit-scrollbar {
+  width: 0; /* Set the width of the scrollbar */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s, width 0.3s, border-radius 0.3s;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  height: 90px;
+  border-radius: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, border 0.3s, border-radius 0.3s height 0.3s ease;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.nav-item {
+  color: #4a3131 !important;
+  margin-right: 20px;
+  list-style: none;
+  transition: margin-right 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Style for the dropdown container */
+.dropdown {
+  color: #ffffff;
+  list-style: none;
+  position: relative;
+}
+
+/* Style for the dropdown trigger (Services span) */
+.dropdown .nav-item {
+  cursor: pointer;
+  color: #000000;
+  /* Adjust color as needed */
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  /* Semi-transparent white background for glassmorphic effect */
+  backdrop-filter: blur(10px);
+  /* Add a blur effect to the background */
+  z-index: 1;
+  min-width: 160px;
+  padding: 8px 0;
+  transition: background-color 0.3s;
+  /* Add a smooth transition effect */
+}
+
+/* Style for the individual dropdown items */
+.dropdown-content a {
+  color: #ffffff;
+  /* Adjust color as needed */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+  /* Add a smooth transition effect */
+}
+
+/* Change the background color of the dropdown items on hover */
+.dropdown-content a:hover {
+  background-color: #c7c7c7;
+  border-radius: 5px;
+}
+
+/* Show the dropdown content when hovering over the dropdown trigger */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.cssbuttons-io-button {
+  background: #4CAF50;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #4CAF50;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #4CAF50;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #9271c3;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+/* Updated styling for the .scrolled class */
+.navbar.scrolled {
+  background: rgba(175, 167, 167, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  width: 70%;
+  border-radius: 50px;
+  height: 14vh;
+  /* border: 2px solid ; */
+  margin: auto;
+  left: 50%;
+  transition: background 0.3s, box-shadow 0.3s, width 0.3s, border-radius 0.3s;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Add fade animation to bars */
+.bar:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.bar:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.bar:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar.active .navbar-items {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .bar {
+    margin-right: 0;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

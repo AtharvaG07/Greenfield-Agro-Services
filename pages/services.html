@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS and other CSS files -->
+    <!-- Favicon -->
+    <link rel="icon" href="/img/logo_new.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/carousel.css">
+    <link rel="stylesheet" href="/css/services.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+
+    <title>Greenfield Agro Services</title>
+</head>
+<body>
+     <!-- Navbar -->
+     <header id="header">
+        <div class="navbar">
+            <div class="logo">
+              <a href="/index.html">
+                <img src="/img/logo_new.png" alt="Company Logo" height="100vh">
+                </a>
+            </div>
+            <div class="hamburger-menu" onclick="toggleNavbar()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="navbar-items" id="navbarItems">
+                <a href="/index.html">
+                    <li class="nav-item"> Home </li>
+                </a>
+                <a href="/pages/projects.html">
+                <li class="nav-item"> Projects </li>
+                </a>
+                <li class="dropdown">
+                  <a href="/pages/services.html"></a>
+                    <span class="nav-item"> Services </span>
+                  </a>
+                  <div class="dropdown-content">
+                    <a href="/pages/services.html">Contract Farming</a>
+                    <a href="/pages/services.html">Import & Export</a>
+                    <a href="/pages/services.html">Certifications</a>
+                </div>
+                </li>
+                <!-- <li class="nav-item">Testimonials</li> -->
+                <a href="/pages/about.html">
+                <li class="nav-item"> About us </li>
+                </a>
+                <a href="/pages/contact.html">
+                <li class="nav-item"> Contact us </li>
+                </a>
+                <!-- <span>
+                <li class="button nav-button">Get Started</li>
+                </span> -->
+                <a href="https://wa.me/9373177177?text=Hello%20Greenfield!!%20Are%20You%20Up%20For%20Small%20Chat%20??" target="_blank">
+                  <button class="button cssbuttons-io-button">
+                      Connect
+                      <div class="icon">
+                          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                  fill="currentColor"></path>
+                          </svg>
+                      </div>
+                  </button>
+              </a>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+    <div id="carousel-container">
+    <object data="/pages/carousel-ser.html" type="text/html" 
+    style="width:100%; height: 100vh; margin-right: -20px; padding: 0;"></object>
+  </div>
+
+  <svg id="wave" class="svg" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 280" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(105, 197, 143, 1)" offset="0%"></stop><stop stop-color="rgba(183, 227, 168, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,252L60,238C120,224,240,196,360,172.7C480,149,600,131,720,102.7C840,75,960,37,1080,42C1200,47,1320,93,1440,93.3C1560,93,1680,47,1800,60.7C1920,75,2040,149,2160,154C2280,159,2400,93,2520,98C2640,103,2760,177,2880,210C3000,243,3120,233,3240,200.7C3360,168,3480,112,3600,74.7C3720,37,3840,19,3960,18.7C4080,19,4200,37,4320,51.3C4440,65,4560,75,4680,70C4800,65,4920,47,5040,42C5160,37,5280,47,5400,51.3C5520,56,5640,56,5760,46.7C5880,37,6000,19,6120,23.3C6240,28,6360,56,6480,56C6600,56,6720,28,6840,23.3C6960,19,7080,37,7200,46.7C7320,56,7440,56,7560,74.7C7680,93,7800,131,7920,140C8040,149,8160,131,8280,126C8400,121,8520,131,8580,135.3L8640,140L8640,280L8580,280C8520,280,8400,280,8280,280C8160,280,8040,280,7920,280C7800,280,7680,280,7560,280C7440,280,7320,280,7200,280C7080,280,6960,280,6840,280C6720,280,6600,280,6480,280C6360,280,6240,280,6120,280C6000,280,5880,280,5760,280C5640,280,5520,280,5400,280C5280,280,5160,280,5040,280C4920,280,4800,280,4680,280C4560,280,4440,280,4320,280C4200,280,4080,280,3960,280C3840,280,3720,280,3600,280C3480,280,3360,280,3240,280C3120,280,3000,280,2880,280C2760,280,2640,280,2520,280C2400,280,2280,280,2160,280C2040,280,1920,280,1800,280C1680,280,1560,280,1440,280C1320,280,1200,280,1080,280C960,280,840,280,720,280C600,280,480,280,360,280C240,280,120,280,60,280L0,280Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(94, 205, 135, 1)" offset="0%"></stop><stop stop-color="rgba(157, 229, 138, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,168L60,149.3C120,131,240,93,360,84C480,75,600,93,720,84C840,75,960,37,1080,32.7C1200,28,1320,56,1440,93.3C1560,131,1680,177,1800,205.3C1920,233,2040,243,2160,247.3C2280,252,2400,252,2520,214.7C2640,177,2760,103,2880,98C3000,93,3120,159,3240,182C3360,205,3480,187,3600,191.3C3720,196,3840,224,3960,200.7C4080,177,4200,103,4320,74.7C4440,47,4560,65,4680,70C4800,75,4920,65,5040,51.3C5160,37,5280,19,5400,18.7C5520,19,5640,37,5760,79.3C5880,121,6000,187,6120,191.3C6240,196,6360,140,6480,112C6600,84,6720,84,6840,79.3C6960,75,7080,65,7200,56C7320,47,7440,37,7560,37.3C7680,37,7800,47,7920,65.3C8040,84,8160,112,8280,102.7C8400,93,8520,47,8580,23.3L8640,0L8640,280L8580,280C8520,280,8400,280,8280,280C8160,280,8040,280,7920,280C7800,280,7680,280,7560,280C7440,280,7320,280,7200,280C7080,280,6960,280,6840,280C6720,280,6600,280,6480,280C6360,280,6240,280,6120,280C6000,280,5880,280,5760,280C5640,280,5520,280,5400,280C5280,280,5160,280,5040,280C4920,280,4800,280,4680,280C4560,280,4440,280,4320,280C4200,280,4080,280,3960,280C3840,280,3720,280,3600,280C3480,280,3360,280,3240,280C3120,280,3000,280,2880,280C2760,280,2640,280,2520,280C2400,280,2280,280,2160,280C2040,280,1920,280,1800,280C1680,280,1560,280,1440,280C1320,280,1200,280,1080,280C960,280,840,280,720,280C600,280,480,280,360,280C240,280,120,280,60,280L0,280Z"></path><defs><linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(45, 107, 61, 1)" offset="0%"></stop><stop stop-color="rgba(67, 160, 71, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)" d="M0,140L60,135.3C120,131,240,121,360,98C480,75,600,37,720,32.7C840,28,960,56,1080,93.3C1200,131,1320,177,1440,177.3C1560,177,1680,131,1800,102.7C1920,75,2040,65,2160,60.7C2280,56,2400,56,2520,65.3C2640,75,2760,93,2880,84C3000,75,3120,37,3240,51.3C3360,65,3480,131,3600,158.7C3720,187,3840,177,3960,149.3C4080,121,4200,75,4320,65.3C4440,56,4560,84,4680,116.7C4800,149,4920,187,5040,200.7C5160,215,5280,205,5400,210C5520,215,5640,233,5760,238C5880,243,6000,233,6120,196C6240,159,6360,93,6480,88.7C6600,84,6720,140,6840,163.3C6960,187,7080,177,7200,168C7320,159,7440,149,7560,135.3C7680,121,7800,103,7920,121.3C8040,140,8160,196,8280,186.7C8400,177,8520,103,8580,65.3L8640,28L8640,280L8580,280C8520,280,8400,280,8280,280C8160,280,8040,280,7920,280C7800,280,7680,280,7560,280C7440,280,7320,280,7200,280C7080,280,6960,280,6840,280C6720,280,6600,280,6480,280C6360,280,6240,280,6120,280C6000,280,5880,280,5760,280C5640,280,5520,280,5400,280C5280,280,5160,280,5040,280C4920,280,4800,280,4680,280C4560,280,4440,280,4320,280C4200,280,4080,280,3960,280C3840,280,3720,280,3600,280C3480,280,3360,280,3240,280C3120,280,3000,280,2880,280C2760,280,2640,280,2520,280C2400,280,2280,280,2160,280C2040,280,1920,280,1800,280C1680,280,1560,280,1440,280C1320,280,1200,280,1080,280C960,280,840,280,720,280C600,280,480,280,360,280C240,280,120,280,60,280L0,280Z"></path></svg>
+
+    <!-- Services -->
+  <div class="services" style="text-align: center; text-decoration: underline; margin-top: 20px; margin-bottom: 20px;">
+    <h1>Our Services</h1>
+  </div>
+    <div id="carousel-container" data-aos="zoom-in">
+      <object type="text/html" data="/pages/ser-services.html"
+          style="width:100%; height: 100vh; margin-right: -20px; padding: 0;"></object>
+  </div>
+
+     <!-- FOOTER -->
+
+     <div class="footer-wave">
+        <div class="custom-shape-divider-bottom-1705669438">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+              <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+              <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+          </svg>
+      </div>
+      </div>
+      <footer class="footer">
+        
+        <div class="footer-container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Company</h4>
+              <a href="/index.html">
+              <img src="/img/logo_new.png" alt="Company Logo" class="company-logo-footer">
+              </a>
+              <p>Not just produce, but promises kept. Greenfield Agro: Where quality meets conscience, and every dish tells a story.</p>
+            </div>
+            <div class="footer-col">
+              <h4>Quick Links</h4>
+              <ul class="quick-links-footer">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/services.html">Services</a></li>
+                <li><a href="/pages/about.html">About Us</a></li>
+                <li><a href="/pages/contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Gallery</h4>
+              <div class="gallery-footer">
+                <div class="gallery-row">
+                  <img src="/img/AB.jpg" alt="Gallery Image 1">
+                  <img src="/img/basket-car.jpg" alt="Gallery Image 2">
+                  <img src="/img/certifications.jpg" alt="Gallery Image 3">
+                </div>
+                <div class="gallery-row">
+                  <img src="/img/df.jpg" alt="Gallery Image 4">
+                  <img src="/img/ff2.jpg" alt="Gallery Image 5">
+                  <img src="/img/hh.jpg" alt="Gallery Image 6">
+                </div>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h4>Contact Us</h4>
+              <div class="footer-col">  	 			
+                <div class="social-links-footer">
+                  <a href="https://www.facebook.com/mygreenfield.in/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/mygreenfield.in/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.youtube.com/@greenfieldagroservices.6906" target="_blank"><i class="fab fa-youtube"></i></a>
+                  <a href="https://wa.me/9373177177?text=Hello%20Greenfield!!%20Are%20You%20Up%20For%20Small%20Chat%20??" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+              </div>
+              <p>Greenfield Agro Services
+                Plot no. 32, Hanuman Nagar,
+                Near Amrutdham, Panchavati,
+                Nashik, Maharashtra, 422003</p>
+              <p>Email: amol@greenfield.asia</p>
+              <p>Phone: +91 9373 177 177</p>
+              <p>GSTIN : 27AJMPG9975B2ZT</p>
+            </div>
+          </div>
+          <div class="footer-strip">
+            <p>
+              Copyright © 2024 <a href="https://greenfield.asia/">Greenfield Agro Services.</a> All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/carousel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .special-thanks {
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.special-thanks .content {
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.custom-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.custom-controls button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-controls button.play::after {
+  content: "\25B6";
+  font-size: 24px;
+}
+
+.custom-controls button.pause::after {
+  content: "II";
+  font-size: 24px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="special-thanks">
+        <div class="content">
+          <h2>Title</h2>
+          <p>This is a special thanks paragraph.</p>
+          <div class="video-container">
+            <video id="custom-video" controls>
+              <source src="/vid/Bachhan.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="custom-controls">
+              <button id="play-pause-button" class="play"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('custom-video');
+        var playPauseButton = document.getElementById('play-pause-button');
+        var controls = document.querySelector('.custom-controls');
+      
+        playPauseButton.addEventListener('click', function() {
+          if (video.paused) {
+            video.play();
+            playPauseButton.classList.remove('play');
+            playPauseButton.classList.add('pause');
+          } else {
+            video.pause();
+            playPauseButton.classList.remove('pause');
+            playPauseButton.classList.add('play');
+          }
+          controls.style.display = 'none';
+        });
+      
+        video.addEventListener('click', function() {
+          if (!video.paused) {
+            controls.style.display = 'block';
+          }
+        });
+      });
+    </script>
+</body>
+</html>

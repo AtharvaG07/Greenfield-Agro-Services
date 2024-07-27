@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 0.3s, width 0.3s, border-radius 0.3s;
+      backdrop-filter: none;
+    }
+
+    .navbar-nav .nav-link {
+      color: #000000 !important;
+    }
+
+    .nav-item {
+      margin-right: 30px;
+    }
+
+    .nav-item:last-child {
+      margin-right: 0;
+    }
+
+    .btn-connect {
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 30px;
+      padding: 10px 20px;
+      transition: all 0.3s;
+    }
+
+    .btn-connect:hover {
+      background-color: #45a049;
+      color: #fff;
+    }
+
+    /* Updated styling for the .scrolled class */
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(11px);
+      -webkit-backdrop-filter: blur(11px);
+      border-radius: 50px;
+      margin-left: -500px;
+    }
+
+    .navbar {
+      background-color: transparent !important;
+      height: 90px;
+      transition: justify-content 0.3s;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .dropdown {
+      border-radius: 30px;
+      color: #000000;
+
+    }
+
+    .dropdown-menu {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 2px solid rgb(247, 82, 82);
+    }
+
+
+    .dropdown-item {
+      color: #000000 !important;
+    }
+
+    .dropdown-item:hover {
+      background-color: #dadada !important;
+    }
+
+    @media (max-width: 963px){
+      .navbar{
+        background-color: #dadada;
+        width: 100%;
+      }
+      .navbar-collapse {
+        background-color: #dadada; 
+        position: fixed;
+    top: 90px; /* Adjust this value according to your navbar height */
+    width: 100%;
+    left: 0;
+    transition: top 0.3s ease;
+
+      }
+      .navbar.scrolled .navbar-collapse{
+        top: 50px;
+      }
+
+      .navbar.scrolled{
+        align-items: center;
+      }
+    }
+  </style>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-transparent navbar-expand-lg-start">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/img/logo_new.png" alt="Company Logo" height="80">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/projects.html">Projects</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle-split" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/pages/services.html">Contract Farming</a>
+                <a class="dropdown-item" href="/pages/services.html">Import & Export</a>
+                <a class="dropdown-item" href="/pages/services.html">Certifications</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contact.html">Contact us</a>
+            </li>
+          </ul>
+
+
+          <a href="https://wa.me/9373177177?text=Hello%20Greenfield!!%20Are%20You%20Up%20For%20Small%20Chat%20??"
+            target="_blank" class="btn ml-lg-3">
+            <button class="button cssbuttons-io-button">
+              Connect
+              <div class="icon">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor">
+                  </path>
+                </svg>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div>
+    <p style="margin-top: 250px;">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque officia exercitationem voluptatum aliquid veniam
+      quo eligendi quae voluptatem beatae iusto dicta voluptates, neque quibusdam. Architecto ducimus et adipisci
+      exercitationem ullam sapiente accusamus ipsum corrupti quaerat tempora vero odit, dicta cumque blanditiis.
+      Similique magni corrupti in, alias assumenda laborum tenetur doloribus dolorem adipisci nemo unde amet iure
+      recusandae accusantium voluptatem porro dolore facere ipsam suscipit? Voluptatibus esse eum aut aliquam ducimus
+      possimus, impedit quidem saepe est minus nobis, quo voluptas tempora vero eos hic explicabo quae tenetur veritatis
+      recusandae, quis corporis atque. Voluptatibus eos totam, iusto est temporibus deserunt dignissimos excepturi
+      nostrum unde minima omnis laboriosam nesciunt praesentium similique sunt, suscipit eveniet, doloremque dolor
+      blanditiis rerum dolores earum dolore. Iste voluptatibus similique error itaque accusamus eveniet sed recusandae,
+      sunt deserunt hic laboriosam perspiciatis corrupti iusto veniam rem laborum quis ipsa possimus sapiente illum
+      mollitia totam facere consectetur. Officiis libero fuga nemo voluptatum iure. Laudantium voluptatibus ad in
+      laboriosam libero illum, quibusdam sed quos voluptatem voluptates, harum dicta consequuntur culpa aliquid saepe
+      nam mollitia praesentium explicabo beatae ducimus ut numquam tenetur est veritatis? Nemo non incidunt praesentium
+      quis hic, pariatur id ex ea eos dolorem, ullam delectus rerum laborum cumque accusamus natus a ipsum neque
+      consectetur assumenda eligendi voluptatibus odit ducimus laudantium. Architecto consectetur velit quibusdam
+      mollitia, necessitatibus minus sit. Aspernatur nihil amet numquam, molestiae quasi iste. Quod ad dolorum autem
+      maxime mollitia dolore, saepe aliquam eaque necessitatibus quis veniam esse at praesentium officiis, adipisci
+      quaerat iusto nisi veritatis, corporis earum. Exercitationem amet fuga doloribus minima, maiores reprehenderit
+      modi voluptates ut quaerat, non suscipit nulla repellat nesciunt mollitia quia culpa officia nobis nam natus
+      dicta. Debitis, sunt hic non doloremque facere pariatur illo natus autem rem ipsa mollitia neque eligendi odit
+      obcaecati corrupti sapiente accusamus impedit earum. Nihil dolor autem quas, tempore eveniet labore! Nulla, fugit.
+      Impedit est sequi nulla aliquam, ex eaque necessitatibus architecto aut deserunt excepturi officia iure sapiente
+      accusamus, esse, quo molestiae eius! Minima tenetur ipsum soluta molestias deleniti itaque, provident commodi,
+      perspiciatis consectetur voluptate aliquam reprehenderit facilis ullam aut adipisci, laboriosam velit odio
+      repellendus suscipit molestiae beatae laudantium architecto. Eligendi facere rerum enim molestias, voluptatibus
+      inventore rem nostrum corrupti asperiores fugiat quaerat sequi ea, provident porro repudiandae recusandae dolores?
+      In, repudiandae! Dolores repudiandae beatae laudantium tenetur, numquam dolorum aspernatur commodi dolorem aliquam
+      ipsam! Et quis deserunt minima velit enim officiis illo ad. Tempore suscipit, molestiae iure nisi repellat
+      perspiciatis ad amet impedit harum accusamus maxime reprehenderit id voluptatum labore odit alias blanditiis
+      praesentium beatae dolorum vitae! Maiores suscipit, tempore non accusamus aut omnis quibusdam exercitationem
+      corporis dolore architecto nulla obcaecati reiciendis quae vero soluta nisi ut! Quae ut vitae possimus ex aliquid
+      eius. Sunt facere laboriosam nam itaque.
+    </p>
+  </div>
+  <script src="/js/script.js"></script>
+
+  <script>
+// <script>
+    
+    window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('header');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+
+    if (window.pageYOffset > 0) {
+      navbar.classList.add('scrolled');
+      navbarCollapse.classList.add('scrolled');
+      navbarCollapse.style.top = navbar.offsetHeight + 'px';
+    } else {
+      navbar.classList.remove('scrolled');
+      navbarCollapse.classList.remove('scrolled');
+      navbarCollapse.style.top = '';
+    }
+  });
+
+  </script>
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .special-thanks {
+            /* max-width: 45vw; */
+            background: #8BB56B;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+            /* margin-left: 40px; */
+            padding: 50px;
+            border: 2px rgb(35, 237, 143);
+            /* border-radius: 25px; */
+            text-align: center;
+            transition: all ease 0.2s;
+        }
+
+        .special-thanks:hover{
+            border-radius: 100px 0 100px 0;
+            transform: scale(1.0);
+        }
+
+        .special-thanks h1 {
+            font-weight: 900;
+            font-size: 35px;
+            margin-top: 0;
+        }
+
+        .video-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 25rem;
+            margin-top: 20px;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 32px;
+        }
+
+        .hover-video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .hover-video:hover+.video-overlay {
+            opacity: 1;
+        }
+
+        .hover-video:hover{
+            filter: blur(0);
+        }
+
+        /* Hide default controls */
+        .hover-video::-webkit-media-controls {
+            display: none ;
+        }
+
+        .hover-video::-webkit-media-controls-panel {
+            width: calc(100% + 30px);
+            margin-left: -15px;
+        }
+
+        .hover-video::-webkit-media-controls-play-button,
+        .hover-video::-webkit-media-controls-volume-slider,
+        .hover-video::-webkit-media-controls-timeline,
+        .hover-video::-webkit-media-controls-fullscreen-button {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="special-thanks">
+        <h1 class="thanks-heading">!!! Special Thanks !!!</h1>
+        <p class="thanks-para">आभाळाएवढं कर्तृत्व असणारी माणसं जेव्हा आपल्या पाठीवर शाबासकीची थाप देतात तेव्हा तो आनंद
+            आभाळातही न मावणारा असतो! कोरोना काळात संपूर्ण देश 'थांबला' होता, पण आम्ही थांबलो नाही! संकटाच्या या काळात
+            आम्ही सर्व काळजी घेत तुमच्यासाठी ताज्या भाजीपाल्याची घरपोच व्यवस्था केली!
+            आमच्या याच कार्याची दखल एक्स्प्रेस ग्रुप सारख्या जबाबदार माध्यम समूहाने घेतली आणि दस्तुरखुद्द अमिताभ बच्चन
+            यांनीही शाबासकीची थाप दिली!
+            या सन्मानाचे आमच्याइतकेच तुम्हीही मानकरी आहात! कारण तुम्ही विश्वास दाखवला म्हणूनच हे शक्य झालं!
+        </p>
+        <div class="video-container">
+            <div class="video-overlay"></div>
+            <video class="hover-video" loop controls  onclick="toggleVideo()">
+                <source src="/vid/Bachhan.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.querySelector('.hover-video');
+            video.addEventListener('click', function () {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

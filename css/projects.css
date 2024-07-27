@@ -1,0 +1,740 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Style the custom scrollbar */
+body::-webkit-scrollbar {
+  width: 0;
+  /* Set the width of the scrollbar */
+}
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s, width 0.3s, border-radius 0.3s;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  height: 90px;
+  border-radius: 0;
+  /* border: 2px solid #726f6f; */
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, border 0.3s, border-radius 0.3s height 0.3s ease;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.navbar-items {
+
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.nav-item {
+  color: #ffffff !important;
+  margin-right: 20px;
+  list-style: none;
+  transition: margin-right 0.3s;
+}
+
+/* Style for the dropdown container */
+.dropdown {
+  color: #ffffff;
+  list-style: none;
+  position: relative;
+}
+
+/* Style for the dropdown trigger (Services span) */
+.dropdown .nav-item {
+  cursor: pointer;
+  color: #000000;
+  /* Adjust color as needed */
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  /* Semi-transparent white background for glassmorphic effect */
+  backdrop-filter: blur(10px);
+  /* Add a blur effect to the background */
+  z-index: 1;
+  min-width: 160px;
+  padding: 8px 0;
+  transition: background-color 0.3s;
+  /* Add a smooth transition effect */
+}
+
+/* Style for the individual dropdown items */
+.dropdown-content a {
+  color: #ffffff;
+  /* Adjust color as needed */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+  /* Add a smooth transition effect */
+}
+
+/* Change the background color of the dropdown items on hover */
+.dropdown-content a:hover {
+  background-color: #c7c7c7;
+  border-radius: 5px;
+
+}
+
+/* Show the dropdown content when hovering over the dropdown trigger */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.cssbuttons-io-button {
+  background: #4CAF50;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #4CAF50;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #4CAF50;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #9271c3;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+
+/* Updated styling for the .scrolled class */
+.navbar.scrolled {
+  background: rgba(175, 167, 167, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  width: 70%;
+  border-radius: 50px;
+  height: 14vh;
+  /* border: 2px solid ; */
+  margin: auto;
+  left: 50%;
+  transition: background 0.3s, box-shadow 0.3s, width 0.3s, border-radius 0.3s;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Add fade animation to bars */
+.bar:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.bar:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.bar:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 13vh;
+  }
+
+  .navbar-items {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+    width: 60vw;
+  }
+
+  .nav-item {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    margin-right: auto;
+    /* Pushes the logo to the extreme left */
+  }
+
+  .hamburger-menu {
+    display: block;
+
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    margin-right: 20px;
+  }
+
+  /* Adjust fade animation for mobile view */
+  .bar:nth-child(1) {
+    transition-delay: 0.2s;
+  }
+
+  .bar:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+
+  .bar:nth-child(3) {
+    transition-delay: 0.6s;
+  }
+}
+
+.nav-men {
+  color: #000000 !important;
+  margin-top: 7%;
+  margin-left: 3%;
+  font-size: 18px;
+  word-spacing: 5px;
+}
+
+
+/* carousel */
+.accordian {
+  width: 805px;
+  height: 30%;
+  overflow: hidden;
+  margin: 100px auto;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+  width: 1200px;
+  /*This will give ample space to the last item to move
+    instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+  position: relative;
+  display: block;
+  width: 160px;
+  float: left;
+
+  border-left: 1px solid #888;
+
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /*If you hover on the images now you should be able to 
+    see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {
+  width: 40px;
+}
+
+.accordian ul li:hover {
+  width: 640px;
+}
+
+
+.accordian li img {
+  display: block;
+  height: 400px;
+}
+
+/*Image title styles*/
+.image_title {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 640px;
+
+}
+
+.image_title a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Carousel Styles */
+
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+
+/* .project-section {
+  margin-top: 50px;
+  margin-left: 20%;
+  margin-bottom: 30px;
+} */
+
+
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  /* box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66); */
+  border-radius: 25px;
+  margin: 3rem 10rem 1rem 10rem;
+  overflow: hidden;
+  position: relative;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #77d294;
+}
+
+.postcard a {
+  color: inherit;
+}
+
+.postcard h1,
+.postcard .h1 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.postcard .small {
+  font-size: 80%;
+}
+
+.postcard .postcard__title {
+  font-size: 1.75rem;
+}
+
+.postcard .postcard__img {
+  max-height: 180px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.postcard .postcard__img_link {
+  display: contents;
+}
+
+.postcard .postcard__bar {
+  width: 50px;
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+}
+
+.postcard .postcard__text {
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.postcard .postcard__preview-txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  height: 100%;
+}
+
+.postcard .postcard__tagbox {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 14px;
+  margin: 20px 0 0 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.postcard .postcard__tagbox .tag__item {
+  display: inline-block;
+  background: rgba(83, 83, 83, 0.4);
+  border-radius: 3px;
+  padding: 2.5px 10px;
+  margin: 0 5px 5px 0;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.postcard .postcard__tagbox .tag__item:hover {
+  background: rgba(83, 83, 83, 0.8);
+}
+
+.postcard:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.postcard:hover .postcard__bar {
+  width: 100px;
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+  }
+
+  .postcard .postcard__title {
+    font-size: 2rem;
+  }
+
+  .postcard .postcard__tagbox {
+    justify-content: start;
+  }
+
+  .postcard .postcard__img {
+    max-width: 300px;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .postcard .postcard__text {
+    padding: 3rem;
+    width: 100%;
+  }
+
+  .postcard:hover .postcard__img {
+    transform: scale(1.1);
+  }
+
+  .postcard:nth-child(2n+1) {
+    flex-direction: row;
+  }
+
+  .postcard:nth-child(2n+0) {
+    flex-direction: row-reverse;
+  }
+
+  .postcard:nth-child(2n+1) .postcard__text::before {
+    left: -12px !important;
+    transform: rotate(4deg);
+  }
+
+  .postcard:nth-child(2n+0) .postcard__text::before {
+    right: -12px !important;
+    transform: rotate(-4deg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .postcard .postcard__text {
+    padding: 2rem 3.5rem;
+  }
+}
+
+/* Dark Cards */
+/* .dark {
+  background: #ffffff;
+} */
+
+.postcard.dark {
+  border-radius: 42px;
+background: #83e3a2;
+box-shadow:  -5px -5px 10px #76cc92,
+             5px 5px 10px rgb(127, 227, 159);
+}
+
+.postcard.dark .t-dark {
+  color: #ffffff;
+}
+
+.dark .postcard .postcard__bar {
+  background-image: linear-gradient(-70deg, #847d7d, transparent 50%);
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 80px;
+  background-color: #D5DBE2;
+  padding: 20px 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 15px auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex-basis: 20%;
+  padding: 20px 0;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.8;
+}
+
+.quick-links-footer{
+  font-size: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: #777;
+}
+
+.company-logo-footer {
+  max-width: 100%;
+  height: 30%;
+  margin-bottom: 10px;
+}
+
+.gallery-footer {
+  margin-left: -100px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.gallery-footer img {
+  width: 80px;
+  height: 100px;
+  border-radius: 10px;
+  aspect-ratio: 1/3;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  border: 2px solid black;
+}
+
+.gallery-footer img:hover
+{
+  width: 50%;
+  border-radius: 0;
+  border : none;
+  /* margin: 5px; */
+  transition: all ease 0.2s;
+}
+
+.social-links-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links-footer a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+  margin-right: -50px;
+  background-color: #ff4500;
+}
+
+.social-links-footer a:hover {
+  color: #ff4500;
+}
+
+/* Existing styles above this comment remain unchanged */
+
+.footer-col .social-links-footer a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255, 0, 0, 0.251);
+	margin:0 0 0 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links-footer a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+
+.footer-strip {
+  background-color: #e2d1d1;
+  height: 35px;
+  width: 100%;
+  margin-top: -70px;
+  color: #000000;
+  /* display: inline-block; */
+  
+}
+
+.footer-strip p{
+  font-size: medium;
+  text-align: center;
+  padding: 5px;
+}
+
+.footer-wave
+{
+  margin-bottom: -90px;
+  padding: 0;
+  /* margin-top: -50px; */
+}
+
+.custom-shape-divider-bottom-1705669438 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1705669438 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 119px;
+}
+
+.custom-shape-divider-bottom-1705669438 .shape-fill {
+    fill: #D5DBE2;
+}

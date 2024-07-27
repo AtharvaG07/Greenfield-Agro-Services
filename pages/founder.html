@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Ubuntu+Condensed&display=swap');
+
+    body {
+      background-color: transparent;
+      margin: 0 0 0 0;
+      font-family: 'Ubuntu', sans-serif;
+      /* margin-bottom: -150px; */
+    }
+    
+
+    .infocardContainer * {
+      font-weight: 300;
+      padding: 0;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    header {
+      height: 2em;
+      background-color: #111122;
+      margin: 0 0 0 0;
+      padding: auto;
+      font-size: 2em;
+      text-align: center;
+      line-height: 2em;
+      color: #21242A;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #555566;
+    }
+
+    a:hover {
+      color: #21242A;
+      text-decoration: underline;
+    }
+
+    .infocardContainer {
+      display: flex;
+      height: 200px;
+      width: 200px;
+      border-radius: 100px;
+      background: rgb(0, 159, 255);
+      background: linear-gradient(121deg, rgba(255, 255, 255, 0) 13%, rgba(0, 159, 255, 1) 100%);
+      transition: all 500ms ease-in;
+      transition-delay: 1s;
+      margin: auto;
+      margin-top: 85px;
+      /* margin-bottom: 50px; */
+      /* bottom: -250px; */
+      /* --margin-top: 100px; */
+    }
+
+    
+
+
+    .infocardContainer:hover {
+      width: 500px;
+      border-radius: 100px 10px 100px 100px;
+      transition: all 1s ease-out;
+    }
+
+    .infocardContainer div {
+      color: #21242A;
+      flex-shrink: 1;
+      width: 100%;
+      --background-color: green;
+    }
+
+    .infocardContainer div * {
+      display: flex;
+      --flex: inherit;
+      overflow: hidden;
+      text-overflow: hidden;
+      --background-color: yellow;
+      color: #21242A;
+      white-space: nowrap;
+      width: 0;
+      height: auto;
+      transition: all 450ms ease-in;
+      transition-delay: 1s;
+    }
+
+    .infocardContainer:hover div * {
+      --background-color: purple;
+      display: flex;
+      visibility: visible;
+      transition: all 1s ease-out;
+      transition-delay: 500ms;
+      width: 100%;
+      height: auto;
+    }
+
+    .infocardContainer #main,
+    .infocardContainer #main img {
+      --background-color: red;
+      height: 200px;
+      width: 200px;
+      padding-right: 10px;
+      border-radius: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .infocardContainer #main img {
+      height: 180px;
+      width: 180px;
+      transition: none;
+      display: float;
+      position: relative;
+      border: 10px solid white;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+
+    .infocardContainer #textbois {
+      position: relative;
+    }
+
+    .infocardContainer #textbois #hotlinks {
+      max-width: 60%;
+      max-height: 30px;
+
+      --background-color: white;
+      position: absolute;
+      bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 13px;
+    }
+
+    .infocardContainer #textbois #hotlinks * {
+      background-color: white;
+      max-width: 30px;
+      --margin: 0 1px 0 1px;
+      border-radius: 25px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      
+  .infocardContainer {
+    margin-top: 30px;
+  }
+
+  .infocardContainer:hover {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .infocardContainer #main img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .infocardContainer #textbois {
+    padding: 5px;
+  }
+
+  .infocardContainer #textbois h2 {
+    font-size: 1.2em;
+  }
+
+  .infocardContainer #textbois h3 {
+    font-size: 1em;
+  }
+
+  .infocardContainer #textbois #hotlinks {
+    max-width: 100%;
+  }
+
+  .infocardContainer #textbois #hotlinks a {
+    max-width: 25px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="infocardContainer">
+    <div id="main">
+      <img src="/img/Mama.png"></img>
+    </div>
+    <div id="textbois">
+      <h2>Mr. Amol A. Gorhe</h2>
+      <h3>CEO & Founder <br>
+        @Greenfield Agro Services</h3>
+      <a href="mailto:limecicila@gmail.com">amol@greenfield.asia</a>
+      <div id="hotlinks">
+        <a href="https://www.instagram.com/amolgorhe/">
+          <svg xmlns="http://www.w3.org/2000/svg" id="codepenio" target="_blank" x="0px" y="0px" width="48" height="48"
+            viewBox="0 0 48 48">
+            <rect width="100%" height="100%" fill="black" />
+            <g fill="black"> 
+              <path
+                d="M 16.5 5 C 10.16639 5 5 10.16639 5 16.5 L 5 31.5 C 5 37.832757 10.166209 43 16.5 43 L 31.5 43 C 37.832938 43 43 37.832938 43 31.5 L 43 16.5 C 43 10.166209 37.832757 5 31.5 5 L 16.5 5 z M 16.5 8 L 31.5 8 C 36.211243 8 40 11.787791 40 16.5 L 40 31.5 C 40 36.211062 36.211062 40 31.5 40 L 16.5 40 C 11.787791 40 8 36.211243 8 31.5 L 8 16.5 C 8 11.78761 11.78761 8 16.5 8 z M 34 12 C 32.895 12 32 12.895 32 14 C 32 15.105 32.895 16 34 16 C 35.105 16 36 15.105 36 14 C 36 12.895 35.105 12 34 12 z M 24 14 C 18.495178 14 14 18.495178 14 24 C 14 29.504822 18.495178 34 24 34 C 29.504822 34 34 29.504822 34 24 C 34 18.495178 29.504822 14 24 14 z M 24 17 C 27.883178 17 31 20.116822 31 24 C 31 27.883178 27.883178 31 24 31 C 20.116822 31 17 27.883178 17 24 C 17 20.116822 20.116822 17 24 17 z">
+              </path>
+            </g>
+          </svg>
+
+
+        </a>
+        <a href="https://www.facebook.com/amol.gorhe">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+            id="codepenio" target="_blank">
+            <path
+              d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.014467 17.065322 19.313017 13.21875 19.898438 L 13.21875 14.384766 L 15.546875 14.384766 L 15.912109 12.019531 L 13.21875 12.019531 L 13.21875 10.726562 C 13.21875 9.7435625 13.538984 8.8710938 14.458984 8.8710938 L 15.935547 8.8710938 L 15.935547 6.8066406 C 15.675547 6.7716406 15.126844 6.6953125 14.089844 6.6953125 C 11.923844 6.6953125 10.654297 7.8393125 10.654297 10.445312 L 10.654297 12.019531 L 8.4277344 12.019531 L 8.4277344 14.384766 L 10.654297 14.384766 L 10.654297 19.878906 C 6.8702905 19.240845 4 15.970237 4 12 C 4 7.5698774 7.5698774 4 12 4 z">
+            </path>
+          </svg>
+        </a>
+        <a href="mailto:amol@greenfield.asia.com?subject=Hello%20there&body=Hey%20!%20I%20want%20to%20connect">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 32 32"
+            id="codepenio" target="_blank">
+            <path
+              d="M 6 7.03125 C 5.691406 7.03125 5.402344 7.089844 5.125 7.175781 L 8.039063 9.03125 L 23.960938 9.03125 L 26.875 7.175781 C 26.597656 7.089844 26.308594 7.03125 26 7.03125 Z M 4.113281 7.71875 C 3.4375 8.269531 3 9.097656 3 10.03125 L 3 23.03125 C 3 24.683594 4.347656 26.03125 6 26.03125 L 26 26.03125 C 27.652344 26.03125 29 24.683594 29 23.03125 L 29 10.03125 C 29 9.097656 28.5625 8.269531 27.886719 7.71875 L 16 15.28125 Z M 6 12.445313 L 16 18.8125 L 26 12.445313 L 26 24.03125 L 6 24.03125 Z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
